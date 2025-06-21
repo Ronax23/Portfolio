@@ -1,0 +1,195 @@
+body
+{
+    background: linear-gradient(to right,#07223A,#050D17);
+    /* height: 100vh; */
+    color: white;
+}
+
+img 
+{
+    width: 100%;
+}
+:root
+{
+    --contact-bottom-bg:#052949;
+    --contact-top-bg:#051C33;
+}
+.moverot 
+{
+    bottom: -100px;
+    left: -20px;
+    z-index: -1;
+    animation: rotator 50s infinite linear backwards ;
+}
+.moverot2 
+{
+    top: 60px;
+    right: -60px;
+    z-index: -1;
+    animation: rotator 50s infinite linear backwards ;
+}
+@keyframes rotator
+{
+    to {
+        transform: rotate(360deg);
+    }
+}
+.nav-item 
+{
+    padding: 10px !important;
+    position: relative;
+    overflow: hidden;
+
+}
+.nav-item::before
+{
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    content: "";
+    border-bottom: 2px solid yellowgreen;
+    width: 100%;
+    transition: .4s ease-in;
+}
+.nav-item:hover::before
+{
+    left: 0;
+}
+.bg-my 
+{
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgba(7, 136, 255, .2);;
+}
+.changer 
+{
+    display: none;
+}
+.active
+{
+    display: block !important;
+}
+.sec1 
+{
+    padding: 100px 0;
+}
+.card 
+{
+    margin: 80px 0 !important;
+}
+iframe
+{
+    height: 400px;
+}
+.ico
+{
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgb(75, 75, 200);
+    text-decoration: none;
+    color: white;
+}
+
+.hide
+{
+    display: none;
+}
+
+input,textarea
+{
+    padding: 10px !important;
+    background-color: #123B60 !important;
+    color: white !important;
+    border: none !important;
+}
+input::placeholder,textarea::placeholder
+{
+    padding-left: 10px;
+    color: #6b9ec9 !important;
+    opacity: .9;
+}
+input:focus,textarea:focus
+{
+   box-shadow: none !important;
+}
+textarea
+{
+    height: 150px;
+    resize: none;
+}
+
+.contact-bottom{
+    background-color: var(--contact-bottom-bg);
+}
+.contact-top{
+    background-color: var(--contact-top-bg);
+    padding: 50px;
+}
+.contact-bottom img 
+{
+    top: -120px;
+    width: 85%;
+      margin: 20px;
+    border-radius: 40px !important;
+}
+
+nav li a
+{
+    color: white !important;
+}
+.padcet 
+{
+    padding: 40px 80px !important;
+}
+.card-body
+{
+    background-color: #FFFFE3 !important;
+}
+
+.sec1 img{
+    border-radius: 100%;
+}
+
+#blog .col-lg-4:nth-child(n+5)
+{
+    display: none;
+}
+@media(max-width:768px)
+{
+    #projects .col-lg-4:nth-child(n+3) 
+    {
+        display: none !important;
+    }
+    #blog .col-lg-4:nth-child(n+4)
+{
+    display: none;
+}
+    .wid 
+    {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:500px)
+{
+    #projects .col-lg-4:nth-child(n+2) 
+    {
+        display: none !important;
+    }
+    .moverot ,.moverot2 
+    {
+        display: none;
+    }
+    .contact-bottom img
+    {
+      
+        top: 0;
+    }
+}
