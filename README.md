@@ -1,5 +1,3 @@
-# Portfolio
-
 # 💼 Personal Portfolio Website
 
 This is my **personal portfolio website**, designed and developed to showcase my skills, projects, experience, and hobbies as a developer. The site is fully responsive, smooth to navigate, and built using clean HTML, CSS, and JavaScript.
