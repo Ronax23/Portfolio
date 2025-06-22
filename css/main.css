@@ -1,10 +1,19 @@
 body
 {
-    background: linear-gradient(to right,#07223A,#050D17);
+    background: linear-gradient(90deg, #07233b 1.67%, #041d34 39.95%, #04192d 58.24%, #040e18 80.28%, #050c16 101.48%);
     /* height: 100vh; */
     color: white;
+    font-family: "Domine","Halveco";
 }
-
+html 
+{
+    font-size: 16px;
+    font-family: "Domine", serif;
+}
+#about-me,header,#contact,#projects,#review,#blog,#my-experience
+{
+    padding-top: 100px;
+}
 img 
 {
     width: 100%;
@@ -28,15 +37,64 @@ img
     z-index: -1;
     animation: rotator 50s infinite linear backwards ;
 }
+
+.btn-cl 
+{
+    background-color: #0788FF;
+    border: 1px solid #0788FF;
+    transition: .5s ease-out;
+    border-radius: 100px;
+    font-size: 1rem;
+    padding: 15px 30px !important;
+    color: white;
+}
+.btn-cl:hover
+{
+    background-color: #040C16;
+     border: 1px solid white;
+}
 @keyframes rotator
 {
     to {
         transform: rotate(360deg);
     }
 }
+#my-experience .ico 
+{
+    width: 72px;
+    font-size: 1.8rem;
+    height: 72px;
+    background-color: #3b1da9;
+}
+#my-experience ul{position: relative;}
+#my-experience ul::before
+{
+    position: absolute;
+    top: 40px;
+    left: 67px;
+    content: "";
+    width: 1px;
+    height: 90%;
+    background-color: #0788FF;
+    z-index: -1;
+}
+
+
+nav 
+{
+    padding: 20px 0 !important;
+}
+.navbar-brand 
+{
+    font-size: 2rem;
+}
+.nav-item a:not(.btn-cl) 
+{
+    padding: 20px 0 !important;
+}
 .nav-item 
 {
-    padding: 10px !important;
+    padding: 0 20px !important;
     position: relative;
     overflow: hidden;
 
@@ -51,9 +109,13 @@ img
     width: 100%;
     transition: .4s ease-in;
 }
-.nav-item:hover::before
-{
+.nav-item:not(:has(.btn-cl)):hover::before {
     left: 0;
+}
+
+#about-me ul 
+{
+    width: 80%;
 }
 .bg-my 
 {
@@ -67,17 +129,17 @@ img
 {
     display: none;
 }
-.active
+.activa
 {
     display: block !important;
 }
 .sec1 
 {
-    padding: 100px 0;
+    padding: 50px 20px;
 }
 .card 
 {
-    margin: 80px 0 !important;
+    margin: 40px 0 !important;
 }
 iframe
 {
@@ -94,8 +156,27 @@ iframe
     background-color: rgb(75, 75, 200);
     text-decoration: none;
     color: white;
+    transition-duration: .5s;
 }
-
+.ico:hover
+{
+    transform: translateY(-5px);
+    background-color: #040C16;
+}
+#projects .col-lg-4 
+{
+    margin-bottom: 60px !important;
+}
+#about-me li {
+    cursor: pointer;
+    transition-duration: .2s;
+    font-weight: 200;
+    font-size: 1.1rem;
+}
+#about-me li:hover
+{
+    color: #0788FF;
+}
 .hide
 {
     display: none;
@@ -160,6 +241,35 @@ nav li a
 {
     display: none;
 }
+.bg-dark 
+{
+    background-color: #000 !important;
+    transition-duration: .5s;
+}
+footer 
+{
+    letter-spacing: 5px;
+}
+footer i 
+{
+    color: red;
+    animation: beat 3s  infinite linear ;
+}
+@keyframes beat {
+    0%
+    {
+        transform: scale(1.0);
+    }
+    50%
+    {
+        transform: scale(1.2);
+    }
+    100%
+    {
+        transform: scale(1.0);
+    }
+    
+}
 @media(max-width:768px)
 {
     #projects .col-lg-4:nth-child(n+3) 
@@ -179,6 +289,22 @@ nav li a
 
 @media(max-width:500px)
 {
+    html 
+    {
+        font-size: 14px;
+    }
+    .padcet
+ {
+    padding: 40px 30px !important;
+}
+#about-me ul 
+{
+    margin: 0 auto;
+}
+.activa
+{
+    height: 28vh;
+}
     #projects .col-lg-4:nth-child(n+2) 
     {
         display: none !important;
